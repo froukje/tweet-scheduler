@@ -22,15 +22,6 @@ oauth = OAuth1Session(
     resource_owner_secret=ACCESS_SECRET,
 )
 
-#auth = tweepy.OAuth1UserHandler(
-#auth = tweepy.Client(
-#    CONSUMER_KEY, CONSUMER_SECRET)#, callback="https://github.com/froukje/twitter-scheduler")#ACCESS_TOKEN, ACCESS_SECRET
-#)
-#print(auth.get_authorization_url())
-#api = tweepy.API(auth)
-#public_tweets = api.home_timeline()
-#for tweet in public_tweets:
-#    logger.info(tweet.text)
 gc = gspread.service_account(filename='credentials.json')
 sh = gc.open_by_key('1UwnTNNGgdgjezTiPXfjOOnRq1HAl2fCT49LSfyefyrg')
 worksheet = sh.sheet1
